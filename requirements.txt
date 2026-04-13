@@ -1,0 +1,7 @@
+apache-airflow==2.8.0
+prophet==1.1.5
+scipy==1.11.4
+dbt-postgres==1.7.0
+prometheus-client==0.19.0
+faker==22.0.0
+psycopg2-binary==2.9.9

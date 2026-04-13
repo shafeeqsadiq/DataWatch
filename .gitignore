@@ -1,0 +1,21 @@
+# Docker and Airflow
+logs/
+postgres-db-volume/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store

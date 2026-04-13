@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: target_orders
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - order_id
+        columns:
+          - name: order_id
+            description: "Primary key"
+            tests:
+              - unique
+              - not_null
+          - name: amount
+            description: "Transaction amount"
+            tests:
+              - not_null
+          - name: status
+            description: "Order status"
+            tests:
+              - accepted_values:
+                  values: ['COMPLETED', 'PENDING', 'FAILED']
